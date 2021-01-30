@@ -1,0 +1,927 @@
+/* общие стили
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	text-decoration: none
+	font-family: 'Lato', sans-serif
+
+.pink
+	color: rgba(241, 109, 127, 1)
+
+.center
+	padding-right: calc(50% - 570px)
+	padding-left: calc(50% - 570px)
+
+.container
+	max-width: 1140px
+	margin: 0 auto
+
+
+/* стили для header
+// стили для страницы INDEX
+.header
+	position: fixed
+	top: 0
+	z-index: 1
+	width: 100%
+	height: 75px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background: #222222
+	.nav_left
+		display: flex
+		align-items: flex-end
+		.link_logo
+			margin-right: 41px
+			height: 38px
+		.link_search
+			height: 28px
+	.nav_right
+		display: flex
+		align-items: flex-end
+		a:not(:first-child)
+	  		margin-left: 34px
+		.link_basket
+			position: relative
+			&::before
+				content: "5"
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 19px
+				height: 19px
+				position: absolute
+				right: -9px
+				top: -7px
+				background-color: #f16d7f
+				font-size: 12px
+				font-weight: 400
+				color: #ffffff
+				border-radius: 50%
+
+/* стили для THE_BRAND
+
+.box_brand
+	display: flex
+	margin-top: 75px
+	.big_man
+		width: 50%
+		height: auto
+	.the_brand
+		background: rgba(241, 228, 230, 1)
+		width: 800px
+		padding: 335px 0 0 92px
+		.text_box_brand
+			padding-left: 16px
+			border-left: 12px solid rgba(241, 109, 127, 1)
+			.sup_text_box_brand
+				margin-bottom: 16px
+				font-style: normal
+				font-weight: 900
+				font-size: 48px
+				line-height: 36px
+				text-transform: uppercase
+				color: #222222
+			.sub_text_box_brand
+				font-weight: 700
+				font-size: 32px
+				line-height: 22px
+				text-transform: uppercase
+				color: #222222
+
+/* стили для for_box
+
+.for_box
+	margin-top: 64px
+	.sup_for_box
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px			
+		.sup_for_min_box
+			width: 360px
+			height: 260px
+			padding-top: 105px
+			transition: transform 0.5s
+			&:hover
+				transform: scale(1.1)
+		.min_box_women
+			background: url("../image/index/for_person/women.jpg") center (center / cover) no-repeat
+		.min_box_men
+			background: url("../image/index/for_person/men.jpg") center (center / cover) no-repeat
+		.min_box_kids
+			background: url("../image/index/for_person/kids.jpg") center (center / cover) no-repeat
+	.sup_text_box_for
+		font-weight: 400
+		font-size: 16px
+		line-height: 13px
+		color: #FFFFFF
+		text-transform: uppercase
+		text-align: center
+	.sub_text_box_for
+		font-weight: 700
+		font-size: 24px
+		line-height: 20px
+		text-transform: uppercase
+		text-align: center
+		margin-top: 6px
+	.sub_for_box
+			padding-top: 65px
+			display: block
+			height: 180px
+			margin: 30px 0 97px
+			background: url("../image/index/for_person/ACCESORIES.jpg")
+			transition: transform 0.5s
+			&:hover
+				transform: scale(1.1) 
+
+/* стили для items_box
+.items_big_box
+	.sup_items_text
+		font-weight: 400
+		font-size: 30px
+		line-height: 24px
+		text-transform: uppercase
+		text-align: center
+		color: #222222
+		margin-bottom: 6px
+	.sub_items_text
+		font-weight: 400
+		font-size: 14px
+		line-height: 15px
+		text-transform: uppercase
+		text-align: center
+		color: #9F9F9F
+		margin-bottom: 48px
+	.card_box
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 100%
+		&_min
+			margin-bottom: 30px
+			transition: 0.3s
+			&:hover
+				transform: translateY(20px)
+			&:hover .image_card_box
+				filter: brightness(35%) opacity(0.86)
+			img
+				display: block				
+	.margin_bt_none
+		margin-bottom: 0
+	.image_card
+		position: relative
+		.hover_add_card
+			display: none
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 140px
+			height: 43px
+			border: solid 1px #ffffff
+			cursor: pointer
+			.hover_add_card_text
+				font-size: 14px
+				font-weight: 400
+				color: #ffffff
+	.card_box_min:hover .hover_add_card
+		display: flex
+		align-items: center
+		justify-content: space-around
+	.info_card
+		background: #F8F8F8
+		padding: 25px 16px 20px
+		width: 360px
+		.name_text
+			font-weight: 400
+			font-size: 13px
+			line-height: 13px
+			text-transform: uppercase
+			text-align: left
+			color: #222222
+			margin-bottom: 13px
+		.description_text
+			font-weight: 300
+			font-size: 11px
+			line-height: 17px
+			text-transform: uppercase
+			text-align: left
+			color: #5D5D5D
+			margin-bottom: 18px
+		.price_text
+			font-weight: 300
+			font-size: 14px
+			line-height: 17px
+			text-transform: uppercase
+			text-align: left
+	.all_product
+		display: block
+		width: 211px
+		height: 47px
+		margin: 49px auto 100px
+		border: solid 1px #ff6a6a
+		cursor: pointer
+		background-color: white
+		font-size: 16px
+		font-weight: normal
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: #f26376
+		text-align: center
+		transition: all 0.5s
+		&:focus
+			outline: none
+		&:hover
+			transform: translateY(-5px)
+			background-color: #F16D7F
+			color: #FFFFFF
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+
+/* стили для advantages_box
+
+
+.advantages_box
+	display: flex
+	justify-content: space-between
+	padding-top: 104px
+	padding-bottom: 104px
+	background-color: #222224
+	.advantages_min_box
+		width: 360px
+		.advantages_image
+			display: block
+			margin: 0 auto
+		.delivery
+			margin-bottom: 28.1px
+		.percent
+			margin-bottom: 19.1px
+		.crown
+			margin-bottom: 21.5px
+		.advantages_sup_text
+			font-size: 20px
+			font-weight: 400
+			line-height: normal
+			text-align: center
+			color: #fbfbfb
+			margin-top: 16px
+			font-size: 14px
+			font-weight: 300
+			line-height: 21px
+			text-align: center
+			color: #fbfbfb
+			padding: 0 22px
+
+/* стили для subscribe_box
+
+.subscribe_box
+	background: url("../image/index/subscribe/waves.jpg") center (center / cover) no-repeat
+	background-size: 0px
+	min-height: 448px
+	display: flex
+	justify-content: space-between
+	.subscribe_box_left
+		width: 360px 
+		margin-top: 97px
+		text-align: center
+		.subscribe_face
+  			border-radius: 50%
+		.subscribe_quote
+			margin-top: 30px
+			font-size: 20px
+			font-weight: 400
+			font-style: italic
+			color: #222224
+	.subscribe_box_right
+		width: 557px
+		margin-top: 150px
+		text-align: center
+		.subscribe_sup_text_right
+			font-size: 24px
+			font-weight: bold
+			line-height: 40.1px
+			color: #222224
+			text-transform: uppercase
+		.subscribe_sub_text_right
+			font-size: 18px
+			font-weight: 400
+			line-height: 30.1px
+			color: #222224
+			text-transform: uppercase
+		.subscribe_form
+			display: flex
+			justify-content: center
+			margin-top: 17px
+			height: 49px
+			.subscribe_email
+				background-color: #e1e1e1
+				padding: 0 22px
+				width: 256px
+				border: none
+				border-radius: 50px 0 0 50px
+				&:focus
+					outline: none
+			.subscribe_button
+				padding: 0 21px
+				border-radius: 0 50px 50px 0
+				border: none
+				background-color: #f16d7f
+				font-size: 14px
+				font-weight: 400
+				color: #ffffff
+				cursor: pointer
+				&:focus
+					outline: none
+
+/* стили для футера
+
+.footer
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 79px
+	background-color: #222224
+	.footer_text_left
+		font-size: 16px
+		font-weight: 400
+		color: #fbfbfb
+	.social_box
+		display: flex
+		.social_link_box
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 24px
+			height: 24px
+			background-color: #ffffff
+			color: #000000
+			transition: background-color 0.5s
+			&:not(:first-child)
+				margin-left: 7px
+				i
+					transition: color 0.5s
+			&:hover
+				background-color: #f16d7f 
+				i
+					color: #ffffff
+
+/* стили для страницы CATALOG___________________
+/* стили для блока хлебные крошки
+.new_arrivals
+	margin-top: 75px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	min-height: 148px
+	background-color: #f8f3f4
+	.new_arrivals_text
+		font-size: 24px
+		font-weight: 400
+		color: #f16d7f
+	.breadcrumb
+		list-style: none
+		li
+			display: inline
+			font-size: 14px
+			font-weight: 300
+			a
+				color: #636363
+			&:last-child > a
+				font-weight: bold
+				color: #f16d7f
+
+/* стили для каталога
+.catalog_big_box
+	.choice_box
+		display: flex
+		margin: 51px 0 64px
+		.filter_box
+			display: flex
+			margin-right: 320px
+			cursor: pointer
+			.filter_box_text
+				margin-right: 11px
+				font-size: 14px
+				font-weight: 600
+				color: #000000
+			.filter_box_line
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				margin-top: 3px
+				width: 15px
+				height: 10px
+				.filter_box_line_min
+					height: 2px
+					background-color: #000000
+				.top
+					width: 100%
+				.middle
+					width: 70%
+				.bottom
+					width: 30%
+		/* стили для настройки правая сторона
+		.preferences_box
+			display: flex
+			.preferences_box_min
+				display: flex
+				position: relative
+				font-size: 14px
+				font-weight: 400
+				color: #6f6e6e
+				cursor: pointer
+				&:not(:last-child)
+					margin-right: 28px
+				&:after
+					content: "\f078"
+					font-family: 'Font Awesome\ 5 Free'
+					font-weight: 900
+					font-size: 14px
+					color: #6f6e6e
+					margin-left: 10px
+				.wrapper_tuning_box
+					display: none
+					position: absolute
+					z-index: 3
+					left: -15px
+					bottom: -108px
+					padding-top: 5px
+				&:hover .wrapper_tuning_box
+					display: block
+				.fine_tuning_box
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					width: 79px
+					min-height: 103px
+					padding: 7px 30px 11px 9px
+					box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21)
+					background-color: #ffffff
+					.fine_tuning_box_min
+						display: flex
+						align-items: center
+						.mark
+							width: 12px
+							height: 12px
+							border: solid 1px #ebebeb
+							margin-right: 10px
+						.size
+							font-family: 'Roboto', sans-serif
+							font-size: 14px
+							font-weight: 400
+							color: #6f6e6e	
+	.wrapper_next_page_box
+		display: flex
+		justify-content: center
+		align-items: center
+		.next_page_box
+			border: solid 1px #ebebeb
+			align-self: center
+			margin: 45px 0 97px
+			.next_page_link
+				display: inline-block
+				padding: 10px
+				font-size: 16px
+				font-weight: 300
+				color: #c4c4c4
+				&:first-child, &:last-child
+					color: #000000
+				&.pink
+					color: #ef5b70
+
+// стили для страницы PRODUCT__________________
+.dynamic_cards
+	position: relative
+	z-index: -1
+	padding: 11px 0 42px
+	border-top: solid 1px rgba(234, 234, 234, 1)
+	border-bottom: solid 1px rgba(234, 234, 234, 1)
+	background-color: rgba(247, 247, 247, 1)
+	&::before
+		content: "\f104"
+		font-family: 'Font Awesome\ 5 Free'
+		color: #000000
+		font-weight: 700
+		font-size: 29px
+		width: 47px
+		height: 47px
+		background-color: rgba(42, 42, 42, 0.15)
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+	&::after
+		content: "\f105"
+		font-family: 'Font Awesome\ 5 Free'
+		color: #f16d7f
+		font-weight: 700
+		font-size: 29px
+		width: 47px
+		height: 47px
+		background-color: rgba(42, 42, 42, 0.15)
+		position: absolute
+		bottom: 50%
+		right: 0
+		transform: translateY(50%)
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer				
+	.dynamic_cards_img
+		display: block
+		margin: 0 auto
+
+.dynamic_cards_info
+	margin: -65px auto 130px
+	width: 1141px
+	bottom: -537px
+	padding: 65px 0
+	background-color: #FFFFFF
+	border: 1px solid rgba(234, 234, 234, 1)
+	.women_collection
+		text-align: center
+		font-size: 14px
+		font-weight: 300
+		color: #f16d7f
+	.red_stripe
+		width: 63px
+		height: 3px
+		margin: 12px auto 0
+		background-color: #ef5b70
+	.moschino
+		font-size: 18px
+		font-weight: 300
+		text-align: center
+		color: #4d4d4d
+		margin-top: 12px
+	.description
+		width: 548px
+		margin: 49px auto 0
+		font-family: Lato
+		font-size: 14px
+		font-weight: 300
+		text-align: center
+		color: #5e5e5e
+	.price
+		margin-top: 32px
+		font-size: 24px
+		font-weight: 300
+		text-align: center
+		color: #ef5b70
+	.gray_stripe
+		margin: 65px auto 0
+		width: 642px
+		height: 1px
+		background-color: #4d4d4d
+	.choice_dynamic_cards_info
+		display: flex
+		justify-content: center
+		margin-top: 65px
+		.choice_dynamic_cards_info_min
+			display: flex
+			align-items: center
+			font-size: 14px
+			font-weight: 400
+			color: #6f6e6e
+			&:not(:last-child)
+				margin-right: 23px
+			&::after
+				content: "\f078"
+				font-family: 'Font Awesome\ 5 Free'
+				font-weight: 900
+				font-size: 14px
+				color: #6f6e6e
+				margin-left: 9px
+	.add_cart
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 49px auto 0
+		width: 211px
+		height: 48px
+		border: solid 1px #ff6a6a
+		background-color: #ffffff
+		color: #ff6a6a
+		cursor: pointer
+		transition: all 0.3s
+		&:hover
+			&:hover
+			border-radius: 50px
+			transform: translateY(-2px)
+			box-shadow: 0 10px 18px black
+			background: #ff6a6a
+			color: #ffffff
+			text-align: center
+			& .add_cart_basket
+				display: none
+		&:focus
+			outline: none
+		.add_cart_basket
+			margin-right: 23px
+
+.subscribe_box_mt
+	margin-top: 128px
+
+video
+	width: 100%
+	height: 100%
+
+.card_box_min.margin_bt_none.transform_none
+	&:hover
+		transform: none
+		
+
+// стили для стринацы CART_____________________
+.cart-box
+	padding-top: 96px
+	padding-bottom: 128px
+	display: flex
+	justify-content: space-between
+	&-item
+		display: flex
+		box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.13)
+		&:not(:last-of-type)
+			margin-bottom: 40px
+		&__info
+			padding: 22px 22px 62px 32px
+			width: 390px
+			position: relative
+			&__close-item
+				position: absolute
+				top: 28px
+				right: 22px
+				display: block
+				height: 18px
+				width: 18px
+				color: #575757
+				cursor: pointer
+			&__name-item
+				padding-right: 125px
+				font-size: 24px
+				font-weight: 400
+				text-align: left
+				color: #222222
+				margin-bottom: 42px
+			&__check
+				font-size: 22px
+				font-weight: normal
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: left
+				color: #575757
+				&:not(:last-of-type)
+					margin-bottom: 6px
+			.check--price
+				span
+					color: #ef5b70
+			.check--Quantity
+				span
+					display: inline-block
+					padding: 0 16px
+					margin-left: 24px
+					border: 1px solid rgba(234, 234, 234, 1)
+					font-size: 18px
+					color: #656565
+	&-buttons
+		display: flex
+		justify-content: space-between
+		margin-top: 72px
+		.cart-box-button
+			padding: 16px 40px
+			border: 1px solid rgba(164, 164, 164, 1)
+			background-color: #ffffff
+			cursor: pointer
+			font-size: 14px
+			font-weight: 300
+			font-stretch: normal
+			font-style: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: #000000
+			transition: all 0.3s
+			&:hover
+				&:hover
+				border-radius: 50px
+				transform: translateY(-2px)
+				box-shadow: 0 10px 18px black
+				background-color: #ef5b70
+				color: #ffffff
+			&:focus
+				outline: none
+	&-generic-info
+		width: 360px
+		&__form
+			margin-bottom: 57px
+			&__heading
+				margin-bottom: 20px
+				font-size: 16px
+				font-weight: 300
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: left
+				color: #222222
+			&__adress
+				display: block
+				width: 100%
+				padding: 12px 12px
+				border: 1px solid #a4a4a4
+				outline: none
+				&:not(:last-child)
+					margin-bottom: 20px
+				&:focus
+					outline: none
+			&__button
+				padding: 12px 15px
+				border: 1px solid #a4a4a4
+				background: #ffff
+				font-size: 11px
+				font-weight: 300
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: left
+				color: #4a4a4a
+				&:focus
+					outline: none
+				&:hover
+					background-color: #ef5b70
+					color: #ffffff
+		&__total-box
+			width: 360px
+			background: #F5F3F3
+			padding: 39px 43px 42px
+			&__sub-total
+				margin-bottom: 12px
+				font-size: 11px
+				font-weight: normal
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: right
+				color: #4a4a4a
+				span
+					margin-left: 20px
+			&__grand-total
+				margin-bottom: 20px
+				font-size: 16px
+				font-weight: 300
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: right
+				color: #222222
+				span
+					font-weight: bold
+					color: #f16d7f
+					margin-left: 20px
+			&__gray-stripe
+				height: 1px
+				background: #e2e2e2
+				margin-bottom: 17px
+			&__checkout
+				display: block
+				padding: 15px 0
+				background: #F16D7F
+				font-size: 16px
+				font-weight: 300
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: center
+				color: #ffffff
+				cursor: pointer
+
+// cтили для страницы REGISTRATION______________
+.registration-box
+	display: flex
+	padding-top: 64px
+	padding-bottom: 96px
+	&-form
+		width: 360px
+		fieldset
+			border: none			
+		&__heading-text
+			display: block
+			margin-bottom: 20px
+			font-size: 16px
+			font-weight: 300
+			text-align: left
+			color: #222222
+		&__input-box
+			display: block
+			border: 1px solid rgba(164, 164, 164, 1)
+			width: 100%
+			padding: 13px 17px 16px
+			margin-bottom: 20px
+			&:focus
+				outline: none
+		.radiobox
+			margin: 31px 0 33px
+			display: flex
+			align-items: center
+			.radiocheck
+				display: inline-block
+				height: 17px
+				width: 17px
+				margin-right: 10px
+			label[for="Male"]
+				margin-right: 20px
+			label[for="Male"], label[for="Female"]
+				font-size: 11px
+				font-weight: 300
+				font-stretch: normal
+				font-style: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: left
+				color: #000000
+		&__sub-text
+			margin: -5px 0 39px
+			font-size: 13px
+			font-weight: 300
+			font-stretch: normal
+			font-style: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: #b1b1b1
+		&__button
+			border: none
+			display: inline-block
+			padding: 17px 29px
+			background-color: #F16D7F
+			font-size: 14px
+			font-weight: normal
+			font-stretch: normal
+			font-style: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: #ffffff
+			cursor: pointer
+			transition: all 0.3s
+			&:focus
+				outline: none
+			&:hover
+				border-radius: 50px
+				transform: translateY(-2px)
+				box-shadow: 0 10px 18px black
+			span
+				display: inline-block
+				margin-left: 20px
+	&-loyaliti
+		margin-left: 128px
+		width: 652px
+		font-size: 24px
+		font-weight: 300
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: #000000
+		&__heading
+			margin-bottom: 22px
+		&__description
+			margin-bottom: 21px
+		&-list
+			&__stage
+				position: relative
+				margin-left: 43px
+				list-style: none
+				&:not(:last-child)
+					margin-bottom: 16px
+				&::before
+					position: absolute
+					top: 3px
+					left: -40px
+					content: "\f00c"
+					font-family: 'Font Awesome\ 5 Free'
+					font-size: 26px
+					font-weight: 900
+					color: #000000
+
+@import "media"
+		
+		
+
+
+	
